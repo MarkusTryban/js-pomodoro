@@ -1,0 +1,13 @@
+:root {
+  --timer-background-color: #fff;
+  --timer-border: 1px solid #000;
+  --timer-height: 70%;
+  --timer-width: 70%;
+}
+
+body,
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
