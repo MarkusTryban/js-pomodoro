@@ -10,4 +10,8 @@ class Timer extends Component {
       isOn: false,
     };
   }
+
+  startTimer() {
+    console.log('Starting timer');
+  }
 }
