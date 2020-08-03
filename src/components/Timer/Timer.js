@@ -22,4 +22,10 @@ class Timer extends Component {
   resetTimer() {
     console.log('Resetting timer');
   }
+
+  render() {
+    return <div className='timer-container' />;
+  }
 }
+
+export default Timer;
