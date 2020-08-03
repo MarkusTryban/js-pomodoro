@@ -6,7 +6,7 @@ import './TimerButton.css';
 
 const TimerButton = ({ buttonAction, buttonValue }) => (
   <div className='button-container'>
-    <p className='button-value'>{buttonAction}</p>
+    <p className='button-value'>{buttonValue}</p>
   </div>
 );
 
