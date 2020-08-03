@@ -14,4 +14,8 @@ class Timer extends Component {
   startTimer() {
     console.log('Starting timer');
   }
+
+  stopTimer() {
+    console.log('Stopping timer');
+  }
 }
