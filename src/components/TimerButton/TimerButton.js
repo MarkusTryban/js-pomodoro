@@ -9,6 +9,7 @@ const TimerButton = ({ buttonAction, buttonValue }) => (
     className='button-container'
     role='button'
     tabIndex='-1'
+    onKeyPress={handleKeyPress}
     onClick={() => buttonAction()}
   >
     <p className='button-value'>{buttonValue}</p>
