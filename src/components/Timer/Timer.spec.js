@@ -52,4 +52,10 @@ describe('mounted Timer', () => {
     container.find('start-timer').first().simulate('click');
     expect(container.instance().state.isOn).toEqual(true);
   });
+
+  it('should change isOn state false when the stop button is clicked', () => {
+    container.instance().forceUpdate();
+    container.find('.stop-timer').first().simulate('click');
+    expect(container.instance().state.isOn).toEqual(true);
+  });
 });
