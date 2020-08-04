@@ -13,10 +13,14 @@ class Timer extends Component {
       seconds: 0,
       isOn: false,
     };
+
+    this.startTimer = this.startTimer.bind(this);
   }
 
   startTimer() {
-    console.log('Starting timer');
+    this.setState({
+      isOn: true,
+    });
   }
 
   stopTimer() {
