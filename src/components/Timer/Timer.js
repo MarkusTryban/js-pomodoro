@@ -16,6 +16,7 @@ class Timer extends Component {
 
     this.startTimer = this.startTimer.bind(this);
     this.stopTimer = this.stopTimer.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
   }
 
   startTimer() {
@@ -31,7 +32,11 @@ class Timer extends Component {
   }
 
   resetTimer() {
-    console.log('Resetting timer');
+    this.setState({
+      isOn: false,
+      minutes: 25,
+      seconds: 0,
+    });
   }
 
   render() {
