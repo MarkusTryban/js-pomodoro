@@ -49,7 +49,7 @@ describe('mounted Timer', () => {
 
   it('should change isOn state true when the start button is clicked', () => {
     container.instance().forceUpdate();
-    container.find('start-timer').first().simulate('click');
+    container.find('.start-timer').first().simulate('click');
     expect(container.instance().state.isOn).toEqual(true);
   });
 
