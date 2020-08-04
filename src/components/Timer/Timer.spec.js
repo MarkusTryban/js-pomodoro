@@ -14,4 +14,12 @@ describe('mounted Timer', () => {
     container.find('.start-timer').first().simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
   });
+
+  it('invokes stopTimer when the stop button is clicked', () => {
+    const spy = jest.spyOn(container.instance(), 'stopTimer');
+    container.instance().forceUpdate();
+    expect(spy).toHaveBeenCalledTimes(0);
+    container.find('.stop-timer').first().simulate('click');
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
 });
