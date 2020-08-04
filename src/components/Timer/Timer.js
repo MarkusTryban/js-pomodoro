@@ -32,7 +32,11 @@ class Timer extends Component {
       <div className='timer-container'>
         <div className='time-display'>Time</div>
         <div className='timer-button-container'>
-          <TimerButton buttonAction={this.startTimer} buttonValue='Start' />
+          <TimerButton
+            className='start-timer'
+            buttonAction={this.startTimer}
+            buttonValue='Start'
+          />
           <TimerButton buttonAction={this.stopTimer} buttonValue='Stop' />
           <TimerButton buttonAction={this.resetTimer} buttonValue='Reset' />
         </div>
