@@ -1,19 +1,17 @@
 import React from 'react';
 
-import { shallow } from 'enzyme';
-
 import Timer from './Timer';
 
-describe('Timer', () => {
+describe('mounted Timer', () => {
   let container;
 
-  beforeEach(() => (container = shallow(<Timer />)));
+  beforEach(() => (container = mount(<Timer />)));
 
-  it('should render a <div />', () => {
-    expect(container.find('div').length).toBeGreaterThanOrEqual(1);
-  });
-
-  it('should render instance of the TimerButton component', () => {
-    expect(container.find('TimerButton').length).toEqual(3);
+  it('invokes startTimer when the start button is clicked', () => {
+    const spy = jest.spyOn(container.instance(), 'startTimer');
+    container.instance().forceUpdate();
+    expect(spy).toHaveBeenCalledTimes(0);
+    container.find('.start-timer').first().simulate('click');
+    expect(spy).toHaveBeenCalledTimes(1);
   });
 });
