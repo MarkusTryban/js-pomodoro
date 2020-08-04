@@ -48,6 +48,7 @@ class Timer extends Component {
   }
 
   stopTimer() {
+    clearInterval(this.myInterval);
     this.setState({
       isOn: false,
     });
