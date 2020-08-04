@@ -56,6 +56,6 @@ describe('mounted Timer', () => {
   it('should change isOn state false when the stop button is clicked', () => {
     container.instance().forceUpdate();
     container.find('.stop-timer').first().simulate('click');
-    expect(container.instance().state.isOn).toEqual(true);
+    expect(container.instance().state.isOn).toEqual(false);
   });
 });
