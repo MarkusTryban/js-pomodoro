@@ -15,6 +15,7 @@ class Timer extends Component {
     };
 
     this.startTimer = this.startTimer.bind(this);
+    this.stopTimer = this.stopTimer.bind(this);
   }
 
   startTimer() {
@@ -24,7 +25,9 @@ class Timer extends Component {
   }
 
   stopTimer() {
-    console.log('Stopping timer');
+    this.setState({
+      isOn: false,
+    });
   }
 
   resetTimer() {
