@@ -5,7 +5,11 @@ import PropTypes from 'prop-types';
 import './TimerButton.css';
 
 const TimerButton = ({ buttonAction, buttonValue }) => (
-  <div className='button-container' onClick={() => buttonAction()}>
+  <div
+    className='button-container'
+    role='button'
+    onClick={() => buttonAction()}
+  >
     <p className='button-value'>{buttonValue}</p>
   </div>
 );
