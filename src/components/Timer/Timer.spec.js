@@ -10,7 +10,7 @@ describe('Timer', () => {
   beforeEach(() => (container = shallow(<Timer />)));
 
   it('should render <div />', () => {
-    expect(container.find('div').length).toEqual(4);
+    expect(container.find('div').length).toEqual(5);
   });
 
   it('should render instances of the TimerButton component', () => {
