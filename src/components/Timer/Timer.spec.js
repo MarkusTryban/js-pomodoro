@@ -14,7 +14,7 @@ describe('Timer', () => {
   });
 
   it('should render instances of the TimerButton component', () => {
-    expect(container.find('TimerButton').length).toBeGreaterThanOrEqual(1);
+    expect(container.find('TimerButton').length).toEqual(3);
   });
 });
 
