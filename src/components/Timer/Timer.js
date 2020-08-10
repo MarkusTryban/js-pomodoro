@@ -70,6 +70,7 @@ class Timer extends Component {
         <div className='time-display'>
           {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
         </div>
+        <div className='break-label'>Break Length</div>
         <div className='timer-button-container'>
           <TimerButton
             className='start-timer'
