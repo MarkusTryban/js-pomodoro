@@ -13,6 +13,10 @@ describe('Timer', () => {
     expect(container.find('div').length).toEqual(5);
   });
 
+  it('should render <button />', () => {
+    expect(container.find('button').length).toEqual(1);
+  });
+
   it('should render instances of the TimerButton component', () => {
     expect(container.find('TimerButton').length).toEqual(3);
   });
