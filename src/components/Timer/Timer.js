@@ -79,7 +79,9 @@ class Timer extends Component {
           <button id='break-increment'>
             <i className='fa fa-arrow-up fa-2x' />
           </button>
-          <button id='session-decrement'>Session dec</button>
+          <button id='session-decrement'>
+            <i className='fa fa-arrow-down fa-2x' />
+          </button>
           <button id='session-increment'>Session inc</button>
           <TimerButton
             className='start-timer'
