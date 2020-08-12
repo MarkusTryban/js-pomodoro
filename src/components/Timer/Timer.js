@@ -10,6 +10,7 @@ class Timer extends Component {
 
     this.state = {
       breakLength: 5,
+      sessionLength: 25,
       minutes: 25,
       seconds: 0,
       isOn: false,
@@ -64,7 +65,7 @@ class Timer extends Component {
   }
 
   render() {
-    const { minutes, seconds, breakLength } = this.state;
+    const { minutes, seconds, breakLength, sessionLength } = this.state;
 
     return (
       <div className='timer-container'>
@@ -84,7 +85,7 @@ class Timer extends Component {
           <i className='fa fa-arrow-down fa-2x' />
         </button>
         <div className='label'>
-          <span id='session-length'>Session Length</span>
+          <span id='session-length'>{sessionLength}</span>
         </div>
         <button id='session-increment'>
           <i className='fa fa-arrow-up fa-2x' />
