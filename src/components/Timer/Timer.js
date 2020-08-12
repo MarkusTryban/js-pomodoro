@@ -74,7 +74,7 @@ class Timer extends Component {
           <span id='break-length'>Break Length</span>
         </div>
         <div className='label'>
-          <span id='session-label'>Session Length</span>
+          <span id='session-length'>Session Length</span>
         </div>
         <div className='timer-button-container'>
           <button id='break-decrement'>
