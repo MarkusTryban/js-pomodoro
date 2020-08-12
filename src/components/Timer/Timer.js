@@ -73,7 +73,9 @@ class Timer extends Component {
         <div id='break-label'>Break Length</div>
         <div id='session-label'>Session Length</div>
         <div className='timer-button-container'>
-          <button id='break-decrement'>Break dec</button>
+          <button id='break-decrement'>
+            <i className='fa fa-arrow-down fa-2x' />
+          </button>
           <button id='break-increment'>Break inc</button>
           <button id='session-decrement'>Session dec</button>
           <button id='session-increment'>Session inc</button>
