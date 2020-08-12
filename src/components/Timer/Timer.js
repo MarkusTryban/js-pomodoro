@@ -73,7 +73,7 @@ class Timer extends Component {
         <div id='break-label'>Break Length</div>
         <div id='session-label'>Session Length</div>
         <div className='timer-button-container'>
-          <button id='break-decrement' />
+          <button id='break-decrement'>Break dec</button>
           <TimerButton
             className='start-timer'
             buttonAction={this.startTimer}
