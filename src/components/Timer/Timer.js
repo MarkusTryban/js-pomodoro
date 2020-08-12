@@ -70,6 +70,9 @@ class Timer extends Component {
         <div className='time-display'>
           {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
         </div>
+        <button id='break-decrement'>
+          <i className='fa fa-arrow-down fa-2x' />
+        </button>
         <div className='label'>
           <span id='break-length'>Break Length</span>
         </div>
@@ -77,9 +80,6 @@ class Timer extends Component {
           <span id='session-length'>Session Length</span>
         </div>
         <div className='timer-button-container'>
-          <button id='break-decrement'>
-            <i className='fa fa-arrow-down fa-2x' />
-          </button>
           <button id='break-increment'>
             <i className='fa fa-arrow-up fa-2x' />
           </button>
