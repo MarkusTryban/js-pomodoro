@@ -9,6 +9,7 @@ class Timer extends Component {
     super(props);
 
     this.state = {
+      breakLength: 5,
       minutes: 25,
       seconds: 0,
       isOn: false,
@@ -63,7 +64,7 @@ class Timer extends Component {
   }
 
   render() {
-    const { minutes, seconds } = this.state;
+    const { minutes, seconds, breakLength } = this.state;
 
     return (
       <div className='timer-container'>
@@ -74,7 +75,7 @@ class Timer extends Component {
           <i className='fa fa-arrow-down fa-2x' />
         </button>
         <div className='label'>
-          <span id='break-length'>Break Length</span>
+          <span id='break-length'>{breakLength}</span>
         </div>
         <button id='break-increment'>
           <i className='fa fa-arrow-up fa-2x' />
