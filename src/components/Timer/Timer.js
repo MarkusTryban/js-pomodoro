@@ -34,7 +34,7 @@ class Timer extends Component {
     const { breakLength } = this.state;
 
     this.setState({
-      breakLength: breakLength - 1,
+      breakLength: breakLength + 1,
     });
   };
 
@@ -93,7 +93,9 @@ class Timer extends Component {
           <i className='fa fa-arrow-down fa-2x' />
         </button>
         <div className='label'>
-          <span id='break-increment'>{breakLength}</span>
+          <span id='break-increment' onClick={this.incrementBreak}>
+            {breakLength}
+          </span>
         </div>
         <button id='break-increment'>
           <i className='fa fa-arrow-up fa-2x' />
