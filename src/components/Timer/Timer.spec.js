@@ -18,7 +18,7 @@ describe('Timer', () => {
   });
 
   it('should render <span />', () => {
-    expect(container.find('span').length).toEqual(2);
+    expect(container.find('span')).toHaveLength(2);
   });
 
   it('should render instances of the TimerButton component', () => {
