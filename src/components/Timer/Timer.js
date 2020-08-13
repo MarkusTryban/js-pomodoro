@@ -16,9 +16,18 @@ class Timer extends Component {
       isOn: false,
     };
 
+    this.decrement = this.decrement.bind(this);
     this.startTimer = this.startTimer.bind(this);
     this.stopTimer = this.stopTimer.bind(this);
     this.resetTimer = this.resetTimer.bind(this);
+  }
+
+  decrement() {
+    const { breakLength } = this.state;
+
+    this.setState({
+      breakLength: breakLength - 1,
+    });
   }
 
   startTimer() {
@@ -72,7 +81,7 @@ class Timer extends Component {
         <div className='time-display'>
           {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
         </div>
-        <button id='break-decrement'>
+        <button id='break-decrement' onClick={this.decrement}>
           <i className='fa fa-arrow-down fa-2x' />
         </button>
         <div className='label'>
