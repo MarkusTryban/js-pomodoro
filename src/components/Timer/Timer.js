@@ -38,6 +38,14 @@ class Timer extends Component {
     });
   };
 
+  decrementSession = () => {
+    const { sessionLength } = this.state;
+
+    this.setState({
+      sessionLength: sessionLength - 1,
+    });
+  };
+
   startTimer = () => {
     const { isOn } = this.state;
 
@@ -98,7 +106,7 @@ class Timer extends Component {
         <button id='break-increment' onClick={this.incrementBreak}>
           <i className='fa fa-arrow-up fa-2x' />
         </button>
-        <button id='session-decrement'>
+        <button id='session-decrement' onClick={this.decrementSession}>
           <i className='fa fa-arrow-down fa-2x' />
         </button>
         <div className='label'>
