@@ -22,7 +22,7 @@ describe('Timer', () => {
   });
 
   it('should render instances of the TimerButton component', () => {
-    expect(container.find('TimerButton').length).toEqual(3);
+    expect(container.find('TimerButton')).toHaveLength(3);
   });
 });
 
