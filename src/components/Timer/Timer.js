@@ -93,7 +93,7 @@ class Timer extends Component {
           <i className='fa fa-arrow-down fa-2x' />
         </button>
         <div className='label'>
-          <span id='break-length'>{breakLength}</span>
+          <span id='break-increment'>{breakLength}</span>
         </div>
         <button id='break-increment'>
           <i className='fa fa-arrow-up fa-2x' />
