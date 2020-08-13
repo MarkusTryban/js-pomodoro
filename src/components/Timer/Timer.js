@@ -22,13 +22,13 @@ class Timer extends Component {
     this.resetTimer = this.resetTimer.bind(this);
   }
 
-  decrement() {
+  decrement = () => {
     const { breakLength } = this.state;
 
     this.setState({
       breakLength: breakLength - 1,
     });
-  }
+  };
 
   startTimer() {
     const { isOn } = this.state;
