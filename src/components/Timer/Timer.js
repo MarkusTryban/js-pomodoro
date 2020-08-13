@@ -65,13 +65,13 @@ class Timer extends Component {
     });
   };
 
-  resetTimer() {
+  resetTimer = () => {
     this.setState({
       isOn: false,
       minutes: 25,
       seconds: 0,
     });
-  }
+  };
 
   render() {
     const { minutes, seconds, breakLength, sessionLength } = this.state;
