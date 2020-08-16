@@ -25,6 +25,10 @@ describe('Timer', () => {
     expect(container.state('breakLength')).toBe(5);
   });
 
+  it('should have value of 25 onload', () => {
+    expect(container.state('sessionLength')).toBe(25);
+  });
+
   it('should render instances of the TimerButton component', () => {
     expect(container.find('TimerButton')).toHaveLength(3);
   });
