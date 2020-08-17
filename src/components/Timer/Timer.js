@@ -102,8 +102,8 @@ class Timer extends Component {
 
     return (
       <div className='timer-container'>
-        <div id='timer-label'>
-          <span>Session</span>
+        <div>
+          <span id='timer-label'>Session</span>
         </div>
         <div className='time-display'>
           {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
