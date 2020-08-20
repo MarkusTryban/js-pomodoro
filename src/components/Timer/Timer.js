@@ -78,11 +78,10 @@ class Timer extends Component {
   startTimer = () => {
     const { isOn } = this.state;
 
-    if (isOn === true) {
-      return;
+    if (isOn === false) {
+      this.timer();
+      this.setState({ isOn: true });
     }
-
-    this.setState({ isOn: true });
   };
 
   stopTimer = () => {
