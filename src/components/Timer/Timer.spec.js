@@ -29,8 +29,8 @@ describe('Timer', () => {
     expect(container.state('sessionLength')).toBe(25);
   });
 
-  it('should render 3 TimerButton components', () => {
-    expect(container.find('TimerButton')).toHaveLength(3);
+  it('should render 2 TimerButton components', () => {
+    expect(container.find('TimerButton')).toHaveLength(2);
   });
 });
 
