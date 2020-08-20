@@ -16,7 +16,7 @@ class Timer extends Component {
       isOn: false,
     };
 
-    this.startTimer = this.startTimer.bind(this);
+    this.startStopTimer = this.startStopTimer.bind(this);
     this.stopTimer = this.stopTimer.bind(this);
     this.resetTimer = this.resetTimer.bind(this);
   }
@@ -75,7 +75,7 @@ class Timer extends Component {
     }, 1000);
   };
 
-  startTimer = () => {
+  startStopTimer = () => {
     const { isOn } = this.state;
 
     if (isOn === false) {
@@ -131,7 +131,7 @@ class Timer extends Component {
         <div className='timer-button-container'>
           <TimerButton
             id='start-stop'
-            buttonAction={this.startTimer}
+            buttonAction={this.startStopTimer}
             buttonValue='Start Stop'
           />
           <TimerButton
