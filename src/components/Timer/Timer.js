@@ -53,12 +53,7 @@ class Timer extends Component {
     });
   };
 
-  startTimer = () => {
-    const { isOn } = this.state;
-
-    if (isOn === true) {
-      return;
-    }
+  timer = () => {
     this.myInterval = setInterval(() => {
       const { seconds, minutes } = this.state;
 
@@ -78,6 +73,15 @@ class Timer extends Component {
         }
       }
     }, 1000);
+  };
+
+  startTimer = () => {
+    const { isOn } = this.state;
+
+    if (isOn === true) {
+      return;
+    }
+
     this.setState({ isOn: true });
   };
 
