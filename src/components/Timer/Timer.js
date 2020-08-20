@@ -17,7 +17,6 @@ class Timer extends Component {
     };
 
     this.startStopTimer = this.startStopTimer.bind(this);
-    this.stopTimer = this.stopTimer.bind(this);
     this.resetTimer = this.resetTimer.bind(this);
   }
 
@@ -81,14 +80,12 @@ class Timer extends Component {
     if (isOn === false) {
       this.timer();
       this.setState({ isOn: true });
+    } else {
+      clearInterval(this.myInterval);
+      this.setState({
+        isOn: false,
+      });
     }
-  };
-
-  stopTimer = () => {
-    clearInterval(this.myInterval);
-    this.setState({
-      isOn: false,
-    });
   };
 
   resetTimer = () => {
