@@ -29,7 +29,7 @@ describe('Timer', () => {
     expect(container.state('sessionLength')).toBe(25);
   });
 
-  it('should render instances of the TimerButton component', () => {
+  it('should render 3 TimerButton components', () => {
     expect(container.find('TimerButton')).toHaveLength(3);
   });
 });
