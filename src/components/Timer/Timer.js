@@ -105,7 +105,7 @@ class Timer extends Component {
         <div>
           <span id='timer-label'>Session</span>
         </div>
-        <div className='time-display'>
+        <div id='time-left'>
           {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
         </div>
         <button id='break-decrement' onClick={this.decrementBreak}>
