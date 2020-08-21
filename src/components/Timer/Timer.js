@@ -23,9 +23,13 @@ class Timer extends Component {
   decrementBreak = () => {
     const { breakLength } = this.state;
 
-    this.setState({
-      breakLength: breakLength - 1,
-    });
+    if (breakLength === 0) {
+      return;
+    } else {
+      this.setState({
+        breakLength: breakLength - 1,
+      });
+    }
   };
 
   incrementBreak = () => {
