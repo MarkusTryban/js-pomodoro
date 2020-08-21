@@ -28,10 +28,6 @@ describe('Timer', () => {
   it('should have value of 25 onload', () => {
     expect(container.state('sessionLength')).toBe(25);
   });
-
-  it('should render 2 TimerButton components', () => {
-    expect(container.find('TimerButton')).toHaveLength(2);
-  });
 });
 
 describe('mounted Timer', () => {
