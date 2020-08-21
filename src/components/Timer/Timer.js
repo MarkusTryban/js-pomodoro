@@ -132,7 +132,7 @@ class Timer extends Component {
             buttonValue='Start Stop'
           />
           <TimerButton
-            className='reset-timer'
+            id='reset'
             buttonAction={this.resetTimer}
             buttonValue='Reset'
           />
