@@ -87,15 +87,11 @@ describe('mounted Timer', () => {
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it('should change isOn state true when the start-stop button is clicked', () => {
+  it('should change isOn state when the start-stop button is clicked', () => {
     container.instance().forceUpdate();
     container.find('#start-stop').first().simulate('click');
     expect(container.instance().state.isOn).toEqual(true);
-  });
-
-  it('should change isOn state false when the stop button is clicked', () => {
-    container.instance().forceUpdate();
-    container.find('.stop-timer').first().simulate('click');
+    container.find('#start-stop').first().simulate('click');
     expect(container.instance().state.isOn).toEqual(false);
   });
 
