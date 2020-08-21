@@ -9,8 +9,8 @@ describe('Timer', () => {
 
   beforeEach(() => (container = shallow(<Timer />)));
 
-  it('should render 7 <div /> elements', () => {
-    expect(container.find('div')).toHaveLength(7);
+  it('should render 8 <div /> elements', () => {
+    expect(container.find('div')).toHaveLength(8);
   });
 
   it('should render 4 <button /> elements', () => {
