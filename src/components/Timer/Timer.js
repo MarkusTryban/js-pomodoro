@@ -117,6 +117,9 @@ class Timer extends Component {
         <div id='time-left'>
           {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
         </div>
+        <div id='break-label'>
+          <span>Break Length</span>
+        </div>
         <button id='break-decrement' onClick={this.decrementBreak}>
           <i className='fa fa-arrow-down fa-2x' />
         </button>
