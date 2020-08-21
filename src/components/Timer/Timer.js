@@ -15,9 +15,6 @@ class Timer extends Component {
       seconds: 0,
       isOn: false,
     };
-
-    this.startStopTimer = this.startStopTimer.bind(this);
-    this.resetTimer = this.resetTimer.bind(this);
   }
 
   decrementBreak = () => {
