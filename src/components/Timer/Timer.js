@@ -43,9 +43,7 @@ class Timer extends Component {
   decrementSession = () => {
     const { sessionLength } = this.state;
 
-    if (sessionLength === 1) {
-      return;
-    } else {
+    if (sessionLength > 1) {
       this.setState({
         sessionLength: sessionLength - 1,
       });
