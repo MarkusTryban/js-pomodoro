@@ -141,7 +141,7 @@ class Timer extends Component {
         <div className='timer-button-container'>
           <TimerButton
             id='start-stop'
-            buttonAction={this.startStopTimer}
+            handleClick={this.startStopTimer}
             buttonValue='Start Stop'
           />
           <TimerButton
