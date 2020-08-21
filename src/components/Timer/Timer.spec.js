@@ -83,7 +83,7 @@ describe('mounted Timer', () => {
     const spy = jest.spyOn(container.instance(), 'resetTimer');
     container.instance().forceUpdate();
     expect(spy).toHaveBeenCalledTimes(0);
-    container.find('.reset-timer').first().simulate('click');
+    container.find('#reset').first().simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
