@@ -33,9 +33,7 @@ class Timer extends Component {
   incrementBreak = () => {
     const { breakLength } = this.state;
 
-    if (breakLength === 60) {
-      return;
-    } else {
+    if (breakLength <= 59) {
       this.setState({
         breakLength: breakLength + 1,
       });
