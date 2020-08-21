@@ -91,6 +91,8 @@ class Timer extends Component {
   resetTimer = () => {
     this.setState({
       isOn: false,
+      breakLength: 5,
+      sessionLength: 25,
       minutes: 25,
       seconds: 0,
     });
