@@ -142,11 +142,9 @@ class Timer extends Component {
           <button id='start-stop' onClick={this.startStopTimer}>
             <i className='fa fa-play-circle fa-2x' />
           </button>
-          <TimerButton
-            id='reset'
-            buttonAction={this.resetTimer}
-            buttonValue='Reset'
-          />
+          <button id='reset' onClick={this.resetTimer}>
+            <i className='fa fa-redo-alt fa-2x' />
+          </button>
         </div>
       </div>
     );
