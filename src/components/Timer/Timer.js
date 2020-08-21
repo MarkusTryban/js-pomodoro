@@ -139,11 +139,9 @@ class Timer extends Component {
           <i className='fa fa-arrow-up fa-2x' />
         </button>
         <div className='timer-button-container'>
-          <TimerButton
-            id='start-stop'
-            handleClick={this.startStopTimer}
-            buttonValue='Start Stop'
-          />
+          <button id='start-stop' onClick={this.startStopTimer}>
+            <i className='fa fa-play-circle fa-2x' />
+          </button>
           <TimerButton
             id='reset'
             buttonAction={this.resetTimer}
