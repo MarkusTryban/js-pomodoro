@@ -129,6 +129,9 @@ class Timer extends Component {
         <button id='break-increment' onClick={this.incrementBreak}>
           <i className='fa fa-arrow-up fa-2x' />
         </button>
+        <div id='session-label'>
+          <span>Session Length</span>
+        </div>
         <button id='session-decrement' onClick={this.decrementSession}>
           <i className='fa fa-arrow-down fa-2x' />
         </button>
