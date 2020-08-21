@@ -71,7 +71,7 @@ describe('mounted Timer', () => {
     const spy = jest.spyOn(container.instance(), 'startStopTimer');
     container.instance().forceUpdate();
     expect(spy).toHaveBeenCalledTimes(0);
-    container.find('#start-stop').first().simulate('click');
+    container.find('#start_stop').first().simulate('click');
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
