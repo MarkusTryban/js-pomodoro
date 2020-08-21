@@ -137,7 +137,7 @@ class Timer extends Component {
           <i className='fa fa-arrow-up fa-2x' />
         </button>
         <div className='timer-button-container'>
-          <button id='start-stop' onClick={this.startStopTimer}>
+          <button id='start_stop' onClick={this.startStopTimer}>
             <i className='fa fa-play-circle fa-2x' />
           </button>
           <button id='reset' onClick={this.resetTimer}>
