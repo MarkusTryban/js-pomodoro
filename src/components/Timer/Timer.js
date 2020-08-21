@@ -53,9 +53,7 @@ class Timer extends Component {
   incrementSession = () => {
     const { sessionLength } = this.state;
 
-    if (sessionLength === 60) {
-      return;
-    } else {
+    if (sessionLength <= 59) {
       this.setState({
         sessionLength: sessionLength + 1,
       });
