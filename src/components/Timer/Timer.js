@@ -94,8 +94,6 @@ class Timer extends Component {
       isOn: false,
       breakLength: 5,
       sessionLength: 25,
-      minutes: 25,
-      seconds: 0,
     });
   };
 
