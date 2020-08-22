@@ -10,6 +10,7 @@ class Timer extends Component {
       breakLength: 5,
       sessionLength: 25,
       isOn: false,
+      timer: 1500,
     };
   }
 
