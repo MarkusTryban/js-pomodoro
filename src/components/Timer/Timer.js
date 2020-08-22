@@ -55,13 +55,17 @@ class Timer extends Component {
   };
 
   startTimer = () => {
+    this.myInterval = setInterval(() => {
+      this.decrementTimer();
+    }, 1000);
+  };
+
+  decrementTimer = () => {
     const { timer } = this.state;
 
-    this.myInterval = setInterval(() => {
-      this.setState({
-        timer: timer - 1,
-      });
-    }, 1000);
+    this.setState({
+      timer: timer - 1,
+    });
   };
 
   currentTimeLeft = () => {
@@ -99,16 +103,14 @@ class Timer extends Component {
   };
 
   render() {
-    const { minutes, seconds, breakLength, sessionLength } = this.state;
+    const { breakLength, sessionLength } = this.state;
 
     return (
       <div className='timer-container'>
         <div>
           <span id='timer-label'>Session</span>
         </div>
-        <div id='time-left'>
-          {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
-        </div>
+        <div id='time-left'>{this.currentTimeLeft()}</div>
         <div id='break-label'>
           <span>Break Length</span>
         </div>
