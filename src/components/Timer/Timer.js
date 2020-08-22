@@ -15,7 +15,7 @@ class Timer extends Component {
   }
 
   breakControl = (e) => {
-    const { isOn } = this.state;
+    const { isOn, breakLength } = this.state;
 
     const value = e.currentTarget.value;
 
@@ -29,26 +29,6 @@ class Timer extends Component {
     } else if (value === '+' && breakLength <= 59) {
       this.setState({
         breakLength: breakLength + 1,
-      });
-    }
-  };
-
-  decrementSession = () => {
-    const { sessionLength } = this.state;
-
-    if (sessionLength > 1) {
-      this.setState({
-        sessionLength: sessionLength - 1,
-      });
-    }
-  };
-
-  incrementSession = () => {
-    const { sessionLength } = this.state;
-
-    if (sessionLength <= 59) {
-      this.setState({
-        sessionLength: sessionLength + 1,
       });
     }
   };
