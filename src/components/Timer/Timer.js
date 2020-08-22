@@ -14,20 +14,19 @@ class Timer extends Component {
     };
   }
 
-  decrementBreak = () => {
-    const { breakLength } = this.state;
+  breakControl = (e) => {
+    const { isOn } = this.state;
 
-    if (breakLength > 1) {
+    const value = e.currentTarget.value;
+
+    if (isOn === true) {
+      return;
+    }
+    if (value === '-' && breakLength > 1) {
       this.setState({
         breakLength: breakLength - 1,
       });
-    }
-  };
-
-  incrementBreak = () => {
-    const { breakLength } = this.state;
-
-    if (breakLength <= 59) {
+    } else if (value === '+' && breakLength <= 59) {
       this.setState({
         breakLength: breakLength + 1,
       });
