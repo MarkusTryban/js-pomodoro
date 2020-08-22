@@ -33,6 +33,27 @@ class Timer extends Component {
     }
   };
 
+  sessionControl = (e) => {
+    const { isOn, sessionLength } = this.state;
+
+    const value = e.currentTarget.value;
+
+    if (isOn === true) {
+      return;
+    }
+    if (value === '-' && sessionLength > 1) {
+      this.setState({
+        sessionLength: sessionLength - 1,
+        timer: sessionLength * 60 - 60,
+      });
+    } else if (value === '+' && sessionLength <= 59) {
+      this.setState({
+        sessionLength: sessionLength + 1,
+        timer: sessionLength * 60 + 60,
+      });
+    }
+  };
+
   startTimer = () => {
     this.myInterval = setInterval(() => {
       this.decrementTimer();
