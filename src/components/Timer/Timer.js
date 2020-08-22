@@ -9,8 +9,6 @@ class Timer extends Component {
     this.state = {
       breakLength: 5,
       sessionLength: 25,
-      minutes: 25,
-      seconds: 0,
       isOn: false,
     };
   }
