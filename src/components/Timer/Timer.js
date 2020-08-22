@@ -54,7 +54,7 @@ class Timer extends Component {
     }
   };
 
-  timer = () => {
+  startTimer = () => {
     this.myInterval = setInterval(() => {
       const { seconds, minutes } = this.state;
 
@@ -80,7 +80,7 @@ class Timer extends Component {
     const { isOn } = this.state;
 
     if (isOn === false) {
-      this.timer();
+      this.startTimer();
       this.setState({ isOn: true });
     } else {
       clearInterval(this.myInterval);
