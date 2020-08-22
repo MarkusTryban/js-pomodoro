@@ -1,23 +1,30 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 import './TimerButton.css';
 
-const TimerButton = ({ buttonAction, buttonValue }) => (
-  <div
-    className='button-container'
-    role='button'
-    tabIndex='-1'
-    onClick={() => buttonAction()}
-  >
-    <p className='button-value'>{buttonValue}</p>
+const TimerButton = () => (
+  <div className='button-container'>
+    <div id={labelID}>{label}</div>
+    <button
+      id={decrementID}
+      className='timer-button'
+      value='-'
+      onClick={onClick}
+    >
+      <i className='fa fa-arrow-down fa-2x' />
+    </button>
+    <div id={labelID} className='timer-button'>
+      {length}
+    </div>
+    <button
+      id={incrementID}
+      className='timer-button'
+      value='+'
+      onClick={onClick}
+    >
+      <i className='fa fa-arrow-down fa-2x' />
+    </button>
   </div>
 );
-
-TimerButton.propTypes = {
-  buttonAction: PropTypes.func.isRequired,
-  buttonValue: PropTypes.string.isRequired,
-};
 
 export default TimerButton;
