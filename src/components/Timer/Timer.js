@@ -122,19 +122,15 @@ class Timer extends Component {
           incrementID='break-increment'
           onClick={this.breakControl}
         />
-        <div id='session-label'>
-          <span>Session Length</span>
-        </div>
-        <button id='session-decrement' onClick={this.decrementSession}>
-          <i className='fa fa-arrow-down fa-2x' />
-        </button>
-        <div className='label'>
-          <span id='session-length'>{sessionLength}</span>
-        </div>
-        <button id='session-increment' onClick={this.incrementSession}>
-          <i className='fa fa-arrow-up fa-2x' />
-        </button>
-
+        <TimerButton
+          labelID='session-label'
+          label='Session Length'
+          decrementID='session-decrement'
+          lengthID='session-length'
+          length={sessionLength}
+          incrementID='session-increment'
+          onClick={this.sessionControl}
+        />
         <div className='timer-button-container'>
           <button id='start_stop' onClick={this.startStopTimer}>
             <i className='fa fa-play-circle fa-2x' />
