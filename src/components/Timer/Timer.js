@@ -66,7 +66,7 @@ class Timer extends Component {
     let timerNum = timer;
 
     if (timerNum < 0) {
-      timerType === 'Session'
+      return timerType === 'Session'
         ? (clearInterval(this.myInterval) &&
             this.setState({
               isOn: false,
