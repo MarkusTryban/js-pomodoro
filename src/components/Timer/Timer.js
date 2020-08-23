@@ -60,6 +60,13 @@ class Timer extends Component {
     }
   };
 
+  switchTimer = (num, str) => {
+    this.setState({
+      timer: num,
+      timerType: str,
+    });
+  };
+
   startTimer = () => {
     this.myInterval = setInterval(() => {
       this.decrementTimer();
