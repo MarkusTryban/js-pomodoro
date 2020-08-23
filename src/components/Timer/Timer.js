@@ -13,6 +13,7 @@ class Timer extends Component {
       sessionLength: 25,
       isOn: false,
       timer: 1500,
+      timerType: 'Session',
     };
   }
 
