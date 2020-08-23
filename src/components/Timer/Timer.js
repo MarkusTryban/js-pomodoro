@@ -25,6 +25,14 @@ class Timer extends Component {
     this.lengthControl('breakLength', value, breakLength, 'Break');
   };
 
+  setSessionLength = (e) => {
+    const { sessionLength } = this.state;
+
+    const value = e.currentTarget.value;
+
+    this.lengthControl('sessionLength', value, sessionLength, 'Session');
+  };
+
   lengthControl = (stateToChange, value, currentLength, Type) => {
     const { isOn, timerType } = this.state;
 
