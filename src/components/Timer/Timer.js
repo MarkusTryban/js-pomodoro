@@ -60,6 +60,28 @@ class Timer extends Component {
     }
   };
 
+  timerControl = () => {
+    const { timer, breakLength, sessionLength, timerType } = this.state;
+
+    let timerNum = timer;
+
+    if (timerNum < 0) {
+      timerType === 'Session'
+        ? (clearInterval(this.myInterval) &&
+            this.setState({
+              isOn: false,
+            }),
+          this.startTimer(),
+          this.switchTimer(breakLength * 60, 'Break'))
+        : (clearInterval(this.myInterval) &&
+            this.setState({
+              isOn: false,
+            }),
+          this.startTimer(),
+          this.switchTimer(sessionLength * 60, 'Session'));
+    }
+  };
+
   switchTimer = (num, str) => {
     this.setState({
       timer: num,
