@@ -122,7 +122,7 @@ class Timer extends Component {
           lengthID='break-length'
           length={breakLength}
           incrementID='break-increment'
-          onClick={this.breakControl}
+          onClick={this.setBreakLength}
         />
         <TimerButton
           labelID='session-label'
