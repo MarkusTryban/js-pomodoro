@@ -17,6 +17,14 @@ class Timer extends Component {
     };
   }
 
+  setBreakLength = (e) => {
+    const { breakLength } = this.state;
+
+    const value = e.currentTarget.value;
+
+    this.lengthControl('breakLength', value, breakLength, 'Break');
+  };
+
   lengthControl = (stateToChange, value, currentLength, Type) => {
     const { isOn, timerType } = this.state;
 
@@ -25,26 +33,23 @@ class Timer extends Component {
     }
     if (timerType === Type) {
       if (value === '-' && currentLength > 1) {
-        this.setState({[stateToChange]: currentLength - 1,
-        });
+        this.setState({ [stateToChange]: currentLength - 1 });
       } else if (value === '+' && currentLength <= 59) {
-        this.setState({[stateToChange]: currentLength + 1,
-        });
+        this.setState({ [stateToChange]: currentLength + 1 });
       }
     } else {
       if (value === '-' && currentLength > 1) {
-        this.setState({[stateToChange]: currentLength - 1,
+        this.setState({
+          [stateToChange]: currentLength - 1,
           timer: currentLength * 60 - 60,
         });
       } else if (value === '+' && currentLength <= 59) {
-        this.setState({[stateToChange]: currentLength + 1,
+        this.setState({
+          [stateToChange]: currentLength + 1,
           timer: currentLength * 60 + 60,
         });
       }
     }
-  };
-
-  
   };
 
   startTimer = () => {
