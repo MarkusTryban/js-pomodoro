@@ -110,7 +110,7 @@ class Timer extends Component {
 
     return (
       <div className='timer-container'>
-        <div>{timerType}</div>
+        <div id='timer-label'>{timerType}</div>
         <div id='time-left'>{this.currentTimeLeft()}</div>
         <TimerButton
           labelID='break-label'
