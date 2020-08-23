@@ -106,13 +106,11 @@ class Timer extends Component {
   };
 
   render() {
-    const { breakLength, sessionLength } = this.state;
+    const { breakLength, sessionLength, timerType } = this.state;
 
     return (
       <div className='timer-container'>
-        <div>
-          <span id='timer-label'>Session</span>
-        </div>
+        <div>{timerType}</div>
         <div id='time-left'>{this.currentTimeLeft()}</div>
         <TimerButton
           labelID='break-label'
