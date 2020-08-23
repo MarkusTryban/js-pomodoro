@@ -17,44 +17,34 @@ class Timer extends Component {
     };
   }
 
-  breakControl = (e) => {
-    const { isOn, breakLength } = this.state;
-
-    const value = e.currentTarget.value;
+  lengthControl = (stateToChange, value, currentLength, Type) => {
+    const { isOn, timerType } = this.state;
 
     if (isOn === true) {
       return;
     }
-    if (value === '-' && breakLength > 1) {
-      this.setState({
-        breakLength: breakLength - 1,
-      });
-    } else if (value === '+' && breakLength <= 59) {
-      this.setState({
-        breakLength: breakLength + 1,
-      });
+    if (timerType === Type) {
+      if (value === '-' && currentLength > 1) {
+        this.setState({[stateToChange]: currentLength - 1,
+        });
+      } else if (value === '+' && currentLength <= 59) {
+        this.setState({[stateToChange]: currentLength + 1,
+        });
+      }
+    } else {
+      if (value === '-' && currentLength > 1) {
+        this.setState({[stateToChange]: currentLength - 1,
+          timer: currentLength * 60 - 60,
+        });
+      } else if (value === '+' && currentLength <= 59) {
+        this.setState({[stateToChange]: currentLength + 1,
+          timer: currentLength * 60 + 60,
+        });
+      }
     }
   };
 
-  sessionControl = (e) => {
-    const { isOn, sessionLength } = this.state;
-
-    const value = e.currentTarget.value;
-
-    if (isOn === true) {
-      return;
-    }
-    if (value === '-' && sessionLength > 1) {
-      this.setState({
-        sessionLength: sessionLength - 1,
-        timer: sessionLength * 60 - 60,
-      });
-    } else if (value === '+' && sessionLength <= 59) {
-      this.setState({
-        sessionLength: sessionLength + 1,
-        timer: sessionLength * 60 + 60,
-      });
-    }
+  
   };
 
   startTimer = () => {
