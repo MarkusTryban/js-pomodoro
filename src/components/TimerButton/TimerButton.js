@@ -13,7 +13,7 @@ const TimerButton = () => (
     >
       <i className='fa fa-arrow-down fa-2x' />
     </button>
-    <div id={labelID} className='timer-button'>
+    <div id={lengthID} className='timer-button'>
       {length}
     </div>
     <button
