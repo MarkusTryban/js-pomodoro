@@ -11,7 +11,7 @@ class TimerButton extends Component {
       lengthID,
       length,
       incrementID,
-      handleClick,
+      onClick,
     } = this.props;
 
     return (
@@ -21,7 +21,7 @@ class TimerButton extends Component {
           id={decrementID}
           className='timer-button'
           value='-'
-          onClick={() => handleClick()}
+          onClick={onClick}
         >
           <i className='fa fa-arrow-down fa-2x' />
         </button>
@@ -32,7 +32,7 @@ class TimerButton extends Component {
           id={incrementID}
           className='timer-button'
           value='+'
-          onClick={() => handleClick()}
+          onClick={onClick}
         >
           <i className='fa fa-arrow-up fa-2x' />
         </button>
