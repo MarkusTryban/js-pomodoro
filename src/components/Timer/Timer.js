@@ -30,7 +30,7 @@ class Timer extends Component {
 
     const value = e.currentTarget.value;
 
-    this.lengthControl('sessionLength', value, sessionLength, 'Session');
+    this.lengthControl('sessionLength', value, sessionLength, 'Break');
   };
 
   lengthControl = (stateToChange, value, currentLength, Type) => {
