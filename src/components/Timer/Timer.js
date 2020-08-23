@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import TimerButton from '../TimerButton/TimerButton';
+
 import './Timer.css';
 
 class Timer extends Component {
@@ -111,18 +113,15 @@ class Timer extends Component {
           <span id='timer-label'>Session</span>
         </div>
         <div id='time-left'>{this.currentTimeLeft()}</div>
-        <div id='break-label'>
-          <span>Break Length</span>
-        </div>
-        <button id='break-decrement' onClick={this.decrementBreak}>
-          <i className='fa fa-arrow-down fa-2x' />
-        </button>
-        <div className='label'>
-          <span id='break-length'>{breakLength}</span>
-        </div>
-        <button id='break-increment' onClick={this.incrementBreak}>
-          <i className='fa fa-arrow-up fa-2x' />
-        </button>
+        <TimerButton
+          labelID='break-label'
+          label='Break Length'
+          decrementID='break-decrement'
+          lengthID='break-length'
+          length={breakLength}
+          incrementID='break-increment'
+          onClick={this.breakControl}
+        />
         <div id='session-label'>
           <span>Session Length</span>
         </div>
@@ -135,6 +134,7 @@ class Timer extends Component {
         <button id='session-increment' onClick={this.incrementSession}>
           <i className='fa fa-arrow-up fa-2x' />
         </button>
+
         <div className='timer-button-container'>
           <button id='start_stop' onClick={this.startStopTimer}>
             <i className='fa fa-play-circle fa-2x' />
