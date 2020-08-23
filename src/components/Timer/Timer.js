@@ -120,7 +120,7 @@ class Timer extends Component {
           lengthID='break-length'
           length={breakLength}
           incrementID='break-increment'
-          handleClick={this.breakControl}
+          onClick={this.breakControl}
         />
         <TimerButton
           labelID='session-label'
@@ -129,7 +129,7 @@ class Timer extends Component {
           lengthID='session-length'
           length={sessionLength}
           incrementID='session-increment'
-          handleClick={this.sessionControl}
+          onClick={this.sessionControl}
         />
         <div className='timer-button-container'>
           <button id='start_stop' onClick={this.startStopTimer}>
