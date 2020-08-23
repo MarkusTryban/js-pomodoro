@@ -131,7 +131,7 @@ class Timer extends Component {
           lengthID='session-length'
           length={sessionLength}
           incrementID='session-increment'
-          onClick={this.sessionControl}
+          onClick={this.setSessionLength}
         />
         <div className='timer-button-container'>
           <button id='start_stop' onClick={this.startStopTimer}>
