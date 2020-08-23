@@ -22,7 +22,7 @@ class Timer extends Component {
 
     const value = e.currentTarget.value;
 
-    this.lengthControl('breakLength', value, breakLength, 'Break');
+    this.lengthControl('breakLength', value, breakLength, 'Session');
   };
 
   setSessionLength = (e) => {
@@ -40,18 +40,18 @@ class Timer extends Component {
       return;
     }
     if (timerType === Type) {
-      if (value === '-' && currentLength > 1) {
+      if (value === '-' && currentLength !== 1) {
         this.setState({ [stateToChange]: currentLength - 1 });
-      } else if (value === '+' && currentLength <= 59) {
+      } else if (value === '+' && currentLength !== 60) {
         this.setState({ [stateToChange]: currentLength + 1 });
       }
     } else {
-      if (value === '-' && currentLength > 1) {
+      if (value === '-' && currentLength !== 1) {
         this.setState({
           [stateToChange]: currentLength - 1,
           timer: currentLength * 60 - 60,
         });
-      } else if (value === '+' && currentLength <= 59) {
+      } else if (value === '+' && currentLength !== 60) {
         this.setState({
           [stateToChange]: currentLength + 1,
           timer: currentLength * 60 + 60,
