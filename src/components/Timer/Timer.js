@@ -140,6 +140,7 @@ class Timer extends Component {
       breakLength: 5,
       sessionLength: 25,
       timer: 1500,
+      timerType: 'Session',
     });
     myInterval && clearInterval(myInterval);
   };
