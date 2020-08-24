@@ -91,9 +91,12 @@ class Timer extends Component {
   };
 
   startTimer = () => {
-    this.myInterval = setInterval(() => {
-      this.decrementTimer();
-    }, 1000);
+    this.setState({
+      myInterval: setInterval(() => {
+        this.decrementTimer();
+        this.timerControl();
+      }, 1000),
+    });
   };
 
   decrementTimer = () => {
