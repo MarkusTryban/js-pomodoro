@@ -119,16 +119,16 @@ class Timer extends Component {
   };
 
   startStopTimer = () => {
-    const { isOn } = this.state;
+    const { isOn, myInterval } = this.state;
 
     if (isOn === false) {
       this.startTimer();
       this.setState({ isOn: true });
     } else {
-      clearInterval(this.myInterval);
       this.setState({
         isOn: false,
       });
+      myInterval && clearInterval(myInterval);
     }
   };
 
