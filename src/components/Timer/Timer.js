@@ -14,6 +14,7 @@ class Timer extends Component {
       isOn: false,
       timer: 1500,
       timerType: 'Session',
+      myInterval: '',
     };
   }
 
