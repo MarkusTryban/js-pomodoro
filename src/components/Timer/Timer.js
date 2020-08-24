@@ -133,12 +133,15 @@ class Timer extends Component {
   };
 
   resetTimer = () => {
+    const { myInterval } = this.state;
+
     this.setState({
       isOn: false,
       breakLength: 5,
       sessionLength: 25,
       timer: 1500,
     });
+    myInterval && clearInterval(myInterval);
   };
 
   render() {
