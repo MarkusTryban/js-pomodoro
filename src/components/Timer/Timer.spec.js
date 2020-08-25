@@ -36,6 +36,10 @@ describe('Timer', () => {
   it('should have value of Session', () => {
     expect(container.state('timerType')).toEqual('Session');
   });
+
+  it('should have value of an empty string', () => {
+    expect(container.state('myInterval')).toEqual('');
+  });
 });
 
 describe('mounted Timer', () => {
