@@ -13,8 +13,8 @@ describe('Timer', () => {
     expect(container.find('div')).toHaveLength(4);
   });
 
-  it('should render 6 <button /> elements', () => {
-    expect(container.find('button')).toHaveLength(6);
+  it('should render 2 <button /> elements', () => {
+    expect(container.find('button')).toHaveLength(2);
   });
 
   it('should have value of 5 onload', () => {
