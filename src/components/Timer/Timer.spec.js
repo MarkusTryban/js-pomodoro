@@ -110,5 +110,6 @@ describe('mounted Timer', () => {
     expect(container.instance().state.breakLength).toEqual(5);
     expect(container.instance().state.sessionLength).toEqual(25);
     expect(container.instance().state.timer).toEqual(1500);
+    expect(container.instance().state.timerType).toEqual('Session');
   });
 });
