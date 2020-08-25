@@ -28,6 +28,10 @@ describe('Timer', () => {
   it('should have value of false', () => {
     expect(container.state('isOn')).toEqual(false);
   });
+
+  it('should have value of 1500', () => {
+    expect(container.state('timer')).toEqual(1500);
+  });
 });
 
 describe('mounted Timer', () => {
