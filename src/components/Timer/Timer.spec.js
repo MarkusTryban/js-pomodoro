@@ -32,6 +32,10 @@ describe('Timer', () => {
   it('should have value of 1500', () => {
     expect(container.state('timer')).toEqual(1500);
   });
+
+  it('should have value of Session', () => {
+    expect(container.state('timerType')).toEqual('Session');
+  });
 });
 
 describe('mounted Timer', () => {
