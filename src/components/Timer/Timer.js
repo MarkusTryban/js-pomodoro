@@ -70,6 +70,8 @@ class Timer extends Component {
       myInterval,
     } = this.state;
 
+    this.timerBuzzer(timer);
+
     if (timer < 0) {
       return timerType === 'Session'
         ? (myInterval && clearInterval(myInterval),
