@@ -88,6 +88,12 @@ class Timer extends Component {
     });
   };
 
+  timerBuzzer = (buzzer) => {
+    if (buzzer === 0) {
+      audioBeep.play();
+    }
+  };
+
   startTimer = () => {
     this.setState({
       myInterval: setInterval(() => {
