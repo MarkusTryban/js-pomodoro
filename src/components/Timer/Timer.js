@@ -149,6 +149,8 @@ class Timer extends Component {
       timerType: 'Session',
     });
     myInterval && clearInterval(myInterval);
+    this.audioBeep.pause();
+    this.audioBeep.currentTime = 0;
   };
 
   render() {
