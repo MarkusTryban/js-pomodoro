@@ -92,7 +92,7 @@ class Timer extends Component {
 
   timerBuzzer = (buzzer) => {
     if (buzzer === 0) {
-      audioBeep.play();
+      this.audioBeep.play();
     }
   };
 
