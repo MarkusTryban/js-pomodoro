@@ -24,6 +24,10 @@ describe('Timer', () => {
   it('should have value of 25 onload', () => {
     expect(container.state('sessionLength')).toBe(25);
   });
+
+  it('should have value of false', () => {
+    expect(container.state('isOn')).toEqual(false);
+  });
 });
 
 describe('mounted Timer', () => {
