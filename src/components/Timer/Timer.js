@@ -184,6 +184,14 @@ class Timer extends Component {
             <i className='fa fa-redo-alt fa-2x' />
           </button>
         </div>
+        <audio
+          id='beep'
+          preload='auto'
+          src='https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav'
+          ref={(audio) => {
+            this.audioBeep = audio;
+          }}
+        />
       </div>
     );
   }
