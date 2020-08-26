@@ -103,7 +103,7 @@ describe('mounted Timer', () => {
     expect(container.instance().state.isOn).toEqual(false);
   });
 
-  it('should change isOn state false when the reset button is clicked', () => {
+  it('should reset all state when the reset button is clicked', () => {
     container.instance().forceUpdate();
     container.find('#reset').first().simulate('click');
     expect(container.instance().state.isOn).toEqual(false);
