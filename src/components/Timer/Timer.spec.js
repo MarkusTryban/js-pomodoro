@@ -47,7 +47,7 @@ describe('mounted Timer', () => {
 
   beforeEach(() => (container = mount(<Timer />)));
 
-  it('should invoke lengthControl when button is clicked', () => {
+  it('should invoke setBreakLength when button is clicked', () => {
     const spy = jest.spyOn(container.instance(), 'setBreakLength');
     container.instance().forceUpdate();
     expect(spy).toHaveBeenCalledTimes(0);
