@@ -12,7 +12,7 @@ describe('App', () => {
   beforeEach(() => (container = shallow(<App />)));
 
   it('should render a <div />', () => {
-    expect(container.find('div').length).toEqual(1);
+    expect(container.find('div')).toHaveLength(1);
   });
 
   it('should render the Timer Component', () => {
