@@ -14,7 +14,7 @@ describe('TimerButton', () => {
   });
 
   it('should render 3 <div /> elements', () => {
-    expect(container.find('div').length).toEqual(3);
+    expect(container.find('div')).toHaveLength(3);
   });
 
   it('should render 2 <button /> elements', () => {
