@@ -13,7 +13,7 @@ describe('TimerButton', () => {
     );
   });
 
-  it('should render a <div />', () => {
-    expect(container.find('div').length).toBeGreaterThanOrEqual(1);
+  it('should render 3 <div /> elements', () => {
+    expect(container.find('div').length).toEqual(3);
   });
 });
