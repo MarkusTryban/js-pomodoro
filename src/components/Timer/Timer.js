@@ -34,13 +34,13 @@ class Timer extends Component {
     this.lengthControl('sessionLength', value, sessionLength, 'Break');
   };
 
-  lengthControl = (stateToChange, value, currentLength, Type) => {
+  lengthControl = (stateToChange, value, currentLength, type) => {
     const { isOn, timerType } = this.state;
 
     if (isOn === true) {
       return;
     }
-    if (timerType === Type) {
+    if (timerType === type) {
       if (value === '-' && currentLength !== 1) {
         this.setState({ [stateToChange]: currentLength - 1 });
       } else if (value === '+' && currentLength !== 60) {
