@@ -63,8 +63,8 @@ describe('mounted Timer', () => {
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it('should reduce sessionLength by 1 when button is clicked', () => {
-    const spy = jest.spyOn(container.instance(), 'decrementSession');
+  it('should invoke setSessionLength when button is clicked', () => {
+    const spy = jest.spyOn(container.instance(), 'setSessionLength');
     container.instance().forceUpdate();
     expect(spy).toHaveBeenCalledTimes(0);
     container.find('#session-decrement').first().simulate('click');
