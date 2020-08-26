@@ -55,8 +55,8 @@ describe('mounted Timer', () => {
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
-  it('should increase breakLength by 1 when button is clicked', () => {
-    const spy = jest.spyOn(container.instance(), 'incrementBreak');
+  it('should invoke setBreakLength when button is clicked', () => {
+    const spy = jest.spyOn(container.instance(), 'setBreakLength');
     container.instance().forceUpdate();
     expect(spy).toHaveBeenCalledTimes(0);
     container.find('#break-increment').first().simulate('click');
