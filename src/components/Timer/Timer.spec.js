@@ -47,8 +47,8 @@ describe('mounted Timer', () => {
 
   beforeEach(() => (container = mount(<Timer />)));
 
-  it('should reduce breakLength by 1 when button is clicked', () => {
-    const spy = jest.spyOn(container.instance(), 'decrementBreak');
+  it('should invoke lengthControl when button is clicked', () => {
+    const spy = jest.spyOn(container.instance(), 'setBreakLength');
     container.instance().forceUpdate();
     expect(spy).toHaveBeenCalledTimes(0);
     container.find('#break-decrement').first().simulate('click');
