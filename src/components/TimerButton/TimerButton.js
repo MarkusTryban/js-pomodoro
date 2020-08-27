@@ -25,9 +25,7 @@ class TimerButton extends Component {
         >
           <i className='fa fa-arrow-down fa-2x' />
         </button>
-        <div id={lengthID} className='timer-button'>
-          {length}
-        </div>
+        <div id={lengthID}>{length}</div>
         <button
           id={incrementID}
           className='timer-button'
