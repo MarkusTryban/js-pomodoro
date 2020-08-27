@@ -8,7 +8,9 @@
 }
 
 .title {
+  font-size: 45px;
   text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 button {
