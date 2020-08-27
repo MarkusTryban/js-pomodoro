@@ -7,6 +7,10 @@
   width: 100%;
 }
 
+.title {
+  text-transform: uppercase;
+}
+
 button {
   background: none;
   outline: none;
