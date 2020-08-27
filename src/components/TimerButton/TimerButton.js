@@ -15,7 +15,7 @@ class TimerButton extends Component {
     } = this.props;
 
     return (
-      <div>
+      <div className='button-container'>
         <div id={labelID}>{label}</div>
         <button
           id={decrementID}
