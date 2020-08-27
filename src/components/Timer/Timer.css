@@ -33,11 +33,13 @@
 }
 
 #timer-label {
+  text-align: center;
   font-size: 1.6em;
   margin: 25px 0 25px;
 }
 
 #time-left {
+  text-align: center;
   font-size: 5em;
   font-family: digital;
   margin-bottom: 25px;
