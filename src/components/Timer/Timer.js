@@ -159,8 +159,6 @@ class Timer extends Component {
     return (
       <div className='timer-container'>
         <div className='title'>Pomodoro Clock</div>
-        <div id='timer-label'>{timerType}</div>
-        <div id='time-left'>{this.currentTimeLeft()}</div>
         <TimerButton
           labelID='break-label'
           label='Break Length'
@@ -179,6 +177,8 @@ class Timer extends Component {
           incrementID='session-increment'
           onClick={this.setSessionLength}
         />
+        <div id='timer-label'>{timerType}</div>
+        <div id='time-left'>{this.currentTimeLeft()}</div>
         <div className='timer-button-container'>
           <button id='start_stop' onClick={this.startStopTimer}>
             <i className='fa fa-play-circle fa-2x' />
