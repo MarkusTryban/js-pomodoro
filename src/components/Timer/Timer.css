@@ -13,6 +13,11 @@
   margin-bottom: 25px;
 }
 
+#timer-label {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+
 button {
   background: none;
   outline: none;
