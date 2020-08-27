@@ -18,6 +18,12 @@
   margin-bottom: 15px;
 }
 
+#time-left {
+  font-size: 5em;
+  font-family: digital;
+  margin-bottom: 25px;
+}
+
 button {
   background: none;
   outline: none;
