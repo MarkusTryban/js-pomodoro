@@ -158,6 +158,7 @@ class Timer extends Component {
 
     return (
       <div className='timer-container'>
+        <div className='title'>Pomodoro Clock</div>
         <div id='timer-label'>{timerType}</div>
         <div id='time-left'>{this.currentTimeLeft()}</div>
         <TimerButton
