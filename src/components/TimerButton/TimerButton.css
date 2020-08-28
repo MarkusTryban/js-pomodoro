@@ -6,3 +6,7 @@
 .timer-button {
   display: inline-block;
 }
+
+.timer-button:nth-child(3) {
+  width: 40px;
+}
