@@ -1,4 +1,9 @@
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 30px;
   background: #fff8dc;
   color: #ff7f50;
   text-align: center;
