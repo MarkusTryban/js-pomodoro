@@ -191,6 +191,16 @@ class Timer extends Component {
             <i className='fa fa-redo-alt fa-2x' />
           </button>
         </div>
+        <div className='footer'>
+          by{' '}
+          <a
+            href='https://markustryban.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Markus Tryban
+          </a>
+        </div>
         <audio
           id='beep'
           preload='auto'
