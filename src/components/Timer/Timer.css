@@ -35,3 +35,18 @@ button {
   color: #000;
   cursor: pointer;
 }
+
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  color: #c4c4c4;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #c4c4c4;
+}
+
+.footer a:hover {
+  color: #000;
+}
