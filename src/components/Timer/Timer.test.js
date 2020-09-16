@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { render, screen } from '@testing-library/react';
+
 import { shallow, mount } from 'enzyme';
 
 import Timer from './Timer';
@@ -10,7 +12,7 @@ describe('Timer', () => {
   beforeEach(() => (container = shallow(<Timer />)));
 
   it('should render 4 <div /> elements', () => {
-    expect(container.find('div')).toHaveLength(4);
+    expect(container.find('div')).toHaveLength(8);
   });
 
   it('should render 2 <button /> elements', () => {
