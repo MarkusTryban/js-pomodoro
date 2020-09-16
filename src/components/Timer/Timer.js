@@ -5,8 +5,8 @@ import TimerButton from '../TimerButton/TimerButton';
 import './Timer.css';
 
 class Timer extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       breakLength: 5,
