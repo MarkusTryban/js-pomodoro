@@ -13,7 +13,7 @@ interface Props {
   myInterval: string;
 }
 
-class Timer extends Component {
+class Timer extends Component<{}, Props> {
   constructor(props: Props) {
     super(props);
 
