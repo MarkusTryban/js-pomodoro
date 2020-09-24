@@ -27,7 +27,7 @@ class Timer extends Component {
     };
   }
 
-  setBreakLength = (e) => {
+  setBreakLength = (e: { currentTarget: { value: string } }): void => {
     const { breakLength } = this.state;
 
     const { value } = e.currentTarget;
@@ -35,7 +35,7 @@ class Timer extends Component {
     this.lengthControl('breakLength', value, breakLength, 'Session');
   };
 
-  setSessionLength = (e) => {
+  setSessionLength = (e: { currentTarget: { value: string } }): void => {
     const { sessionLength } = this.state;
 
     const { value } = e.currentTarget;
