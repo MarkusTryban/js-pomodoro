@@ -153,7 +153,7 @@ class Timer extends Component {
     this.audioBeep.currentTime = 0;
   };
 
-  render() {
+  render(): JSX.Element {
     const { breakLength, sessionLength, timerType } = this.state;
 
     return (
@@ -184,10 +184,10 @@ class Timer extends Component {
           </div>
         </div>
         <div className='timer-button-container'>
-          <button id='start_stop' onClick={this.startStopTimer}>
+          <button type='button' id='start_stop' onClick={this.startStopTimer}>
             <i className='fa fa-play-circle fa-2x' />
           </button>
-          <button id='reset' onClick={this.resetTimer}>
+          <button type='button' id='reset' onClick={this.resetTimer}>
             <i className='fa fa-redo-alt fa-2x' />
           </button>
         </div>
