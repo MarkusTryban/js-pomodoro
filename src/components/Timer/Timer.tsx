@@ -4,9 +4,18 @@ import TimerButton from '../TimerButton/TimerButton';
 
 import './Timer.css';
 
+interface Props {
+  breakLength: number;
+  sessionLength: number;
+  isOn: boolean;
+  timer: number;
+  timerType: string;
+  myInterval: string;
+}
+
 class Timer extends Component {
-  constructor() {
-    super();
+  constructor(props: Props) {
+    super(props);
 
     this.state = {
       breakLength: 5,
@@ -21,7 +30,7 @@ class Timer extends Component {
   setBreakLength = (e) => {
     const { breakLength } = this.state;
 
-    const value = e.currentTarget.value;
+    const { value } = e.currentTarget;
 
     this.lengthControl('breakLength', value, breakLength, 'Session');
   };
@@ -29,12 +38,17 @@ class Timer extends Component {
   setSessionLength = (e) => {
     const { sessionLength } = this.state;
 
-    const value = e.currentTarget.value;
+    const { value } = e.currentTarget;
 
     this.lengthControl('sessionLength', value, sessionLength, 'Break');
   };
 
-  lengthControl = (stateToChange, value, currentLength, type) => {
+  lengthControl = (
+    stateToChange: any,
+    value: string,
+    currentLength: number,
+    type: any
+  ) => {
     const { isOn, timerType } = this.state;
 
     if (isOn === true) {
