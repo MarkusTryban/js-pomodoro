@@ -95,7 +95,7 @@ class Timer extends Component<{}, Props> {
     }
   };
 
-  switchTimer = (num, str) => {
+  switchTimer = (num: number, str: string): void => {
     this.setState({
       timer: num,
       timerType: str,
