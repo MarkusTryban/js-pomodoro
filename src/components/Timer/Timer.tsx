@@ -136,7 +136,7 @@ class Timer extends Component<{}, Props> {
     return `${minutes}:${seconds}`;
   };
 
-  startStopTimer = () => {
+  startStopTimer = (): void | '' => {
     const { isOn, myInterval } = this.state;
 
     if (isOn === false) {
