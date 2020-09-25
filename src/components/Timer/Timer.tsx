@@ -146,7 +146,7 @@ class Timer extends Component<{}, Props> {
       this.setState({
         isOn: false,
       });
-      myInterval && clearInterval(myInterval);
+      return myInterval && clearInterval(myInterval);
     }
   };
 
