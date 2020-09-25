@@ -102,7 +102,7 @@ class Timer extends Component<{}, Props> {
     });
   };
 
-  timerBuzzer = (buzzer) => {
+  timerBuzzer = (buzzer: number): void => {
     if (buzzer === 0) {
       this.audioBeep.play();
     }
