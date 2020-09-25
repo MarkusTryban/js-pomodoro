@@ -44,11 +44,11 @@ class Timer extends Component<{}, Props> {
   };
 
   lengthControl = (
-    stateToChange: any,
+    stateToChange: string,
     value: string,
     currentLength: number,
-    type: any
-  ) => {
+    type: string
+  ): void => {
     const { isOn, timerType } = this.state;
 
     if (isOn === true) {
@@ -60,18 +60,16 @@ class Timer extends Component<{}, Props> {
       } else if (value === '+' && currentLength !== 60) {
         this.setState({ [stateToChange]: currentLength + 1 });
       }
-    } else {
-      if (value === '-' && currentLength !== 1) {
-        this.setState({
-          [stateToChange]: currentLength - 1,
-          timer: currentLength * 60 - 60,
-        });
-      } else if (value === '+' && currentLength !== 60) {
-        this.setState({
-          [stateToChange]: currentLength + 1,
-          timer: currentLength * 60 + 60,
-        });
-      }
+    } else if (value === '-' && currentLength !== 1) {
+      this.setState({
+        [stateToChange]: currentLength - 1,
+        timer: currentLength * 60 - 60,
+      });
+    } else if (value === '+' && currentLength !== 60) {
+      this.setState({
+        [stateToChange]: currentLength + 1,
+        timer: currentLength * 60 + 60,
+      });
     }
   };
 
