@@ -108,7 +108,7 @@ class Timer extends Component<{}, Props> {
     }
   };
 
-  startTimer = () => {
+  startTimer = (): void => {
     this.setState({
       myInterval: setInterval(() => {
         this.decrementTimer();
