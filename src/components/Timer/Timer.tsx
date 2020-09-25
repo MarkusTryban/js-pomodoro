@@ -150,7 +150,7 @@ class Timer extends Component<{}, Props> {
     }
   };
 
-  resetTimer = () => {
+  resetTimer = (): void => {
     const { myInterval } = this.state;
 
     this.setState({
