@@ -217,10 +217,12 @@ class Timer extends Component<{}, Props> {
           id='beep'
           preload='auto'
           src='https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav'
-          ref={(audio) => {
+          ref={(audio): void => {
             this.audioBeep = audio;
           }}
-        />
+        >
+          <track kind='captions' />
+        </audio>
       </div>
     );
   }
