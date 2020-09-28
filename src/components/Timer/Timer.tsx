@@ -14,6 +14,8 @@ interface Props {
 }
 
 class Timer extends Component<{}, Props> {
+  audioBeep!: HTMLAudioElement;
+
   constructor(props: Readonly<{}>) {
     super(props);
 
@@ -217,7 +219,7 @@ class Timer extends Component<{}, Props> {
           id='beep'
           preload='auto'
           src='https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav'
-          ref={(audio): void => {
+          ref={(audio: HTMLAudioElement): void => {
             this.audioBeep = audio;
           }}
         >
