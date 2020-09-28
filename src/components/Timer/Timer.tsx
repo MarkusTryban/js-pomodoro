@@ -73,7 +73,7 @@ class Timer extends Component<{}, Props> {
     }
   };
 
-  timerControl = () => {
+  timerControl = (): void => {
     const {
       timer,
       breakLength,
