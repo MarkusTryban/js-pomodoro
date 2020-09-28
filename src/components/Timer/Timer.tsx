@@ -130,8 +130,8 @@ class Timer extends Component<{}, Props> {
   currentTimeLeft = (): string => {
     const { timer } = this.state;
 
-    let minutes = Math.floor(timer / 60);
-    let seconds = timer - minutes * 60;
+    const minutes = Math.floor(timer / 60);
+    const seconds = timer - minutes * 60;
 
     return `${minutes < 10 ? `0${minutes}` : minutes}:${
       seconds < 10 ? `0${seconds}` : seconds
