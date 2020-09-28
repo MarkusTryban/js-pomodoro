@@ -2,8 +2,6 @@ import React from 'react';
 
 import { render, screen } from '@testing-library/react';
 
-import { shallow, mount } from 'enzyme';
-
 import Timer from './Timer';
 
 test('should return link', () => {
