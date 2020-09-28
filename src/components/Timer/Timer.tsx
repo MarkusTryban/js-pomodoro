@@ -14,7 +14,7 @@ interface Props {
 }
 
 class Timer extends Component<{}, Props> {
-  constructor(props: Props) {
+  constructor(props: Readonly<{}>) {
     super(props);
 
     this.state = {
