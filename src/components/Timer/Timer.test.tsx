@@ -4,6 +4,9 @@ import { render, screen } from '@testing-library/react';
 
 import Timer from './Timer';
 
+test('should render without crashing', () => {
+  render(<Timer />);
+});
 test('should return link', () => {
   render(<Timer />);
   expect(screen.getByRole('link', { name: /markus tryban/i }));
