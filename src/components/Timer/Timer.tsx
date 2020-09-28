@@ -127,7 +127,7 @@ class Timer extends Component<{}, Props> {
     });
   };
 
-  currentTimeLeft = () => {
+  currentTimeLeft = (): string => {
     const { timer } = this.state;
 
     let minutes = Math.floor(timer / 60);
