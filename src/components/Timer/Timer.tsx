@@ -119,7 +119,7 @@ class Timer extends Component<{}, Props> {
     });
   };
 
-  decrementTimer = () => {
+  decrementTimer = (): void => {
     const { timer } = this.state;
 
     this.setState({
